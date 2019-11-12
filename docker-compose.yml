@@ -1,0 +1,26 @@
+version: '3'
+services:
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    networks:
+      - app
+  thumbor:
+    image: apsl/thumbor:latest
+    volumes:
+      - data:/data
+    ports:
+      - '8000:8000'
+    environment:
+      - DETECTORS=['thumbor.detectors.face_detector','thumbor.detectors.feature_detector']
+    networks:
+      - app
+volumes:
+  data:
+    driver: local
+networks:
+  app:
+    driver: bridge
