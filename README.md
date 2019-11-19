@@ -1,2 +1,2 @@
 # Photo Storage API
-A API of photo storage and delivery.
+An API of photo storage and delivery.
