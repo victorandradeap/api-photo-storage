@@ -1,2 +1,3 @@
-# photo-storage-with-thumbor
-A POC of photo storage using thumbor.
+# Photo Storage With Thumbor
+
+A project of media storage and delivery using thumbor, MinIO ans Spring.
