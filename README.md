@@ -1,3 +1,8 @@
-# Photo Storage With Thumbor
+# API Photo Storage
+An API of photo storage and delivery.
 
-A project of media storage and delivery using thumbor, MinIO ans Spring.
+- Spring Boot
+- thumbor.
+- MinIO
+- MySQL
+>>>>>>> 540a27db2a292177d53083cbd3bde1582ab22e25
