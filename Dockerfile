@@ -4,6 +4,6 @@ WORKDIR /app
 
 COPY . .
 
-RUN mvn package -DskipTests
+RUN mvn package
 
-ENTRYPOINT ["java", "-jar", "target/photo-storage-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "target/api-media-storage-0.0.1-SNAPSHOT.jar"]

@@ -18,6 +18,28 @@ services:
       - DETECTORS=['thumbor.detectors.face_detector','thumbor.detectors.feature_detector']
     networks:
       - app
+  minio:
+    image: minio/minio
+    command: server /data
+    volumes:
+      - data:/data
+    ports:
+      - '9000:9000'
+    environment:
+      - MINIO_ACCESS_KEY=AKIAIOSFODNN7MINIO
+      - MINIO_SECRET_KEY=wJalrXUtnFEMI/K7MDENG/bPxRfiCYMINIO
+    networks:
+      - app
+  mysql:
+    image: mysql:8.0.18
+    restart: always
+    environment:
+      MYSQL_DATABASE: media
+      MYSQL_USER: AKIAIOSFODNN7MYSQL
+      MYSQL_PASSWORD: bPxRfiCYMYSQL
+      MYSQL_ROOT_PASSWORD: rootpass
+    ports:
+      - "3306:3306"
 volumes:
   data:
     driver: local
