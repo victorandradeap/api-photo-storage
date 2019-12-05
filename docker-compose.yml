@@ -32,7 +32,6 @@ services:
       - app
   mysql:
     image: mysql:8.0.18
-    restart: always
     environment:
       MYSQL_DATABASE: media
       MYSQL_USER: AKIAIOSFODNN7MYSQL
