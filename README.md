@@ -1,5 +1,5 @@
 # API Photo Storage
-This is an API to storage and delivery photos.
+This is an API to storage photos.
 
 - Spring Boot
 - thumbor.
